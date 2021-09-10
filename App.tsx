@@ -10,13 +10,7 @@ export default function App() {
 
       <View style={styles.header}>
 
-      <Image source={require("./src/assets/link-like.png")}>
-
-      </Image>
-      <Image source={require("./src/assets/link-like.png")}>
-
-      </Image>
-      <Image source={require("./src/assets/link-like.png")}>
+      <Image source={require("./src/assets/bla.jpg")}>
 
       </Image>
 
