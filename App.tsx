@@ -1,13 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
-import setaDireita from "./src/assets/arrow-left.png";
-import lupaPesquisa from "./src/assets/ei_search.png";
-import comentario from "./src/assets/link-coment.png";
-import like from "./src/assets/link-like.png";
-import linkshare from "./src/assets/link-share.png";
-import share from "./src/assets/share.png";
-
 
 const OnelinkHeader = (props:any) =>{
   return(
@@ -24,7 +17,7 @@ const OnelinkHeader = (props:any) =>{
 
 const StyleOnelinkHeader = StyleSheet.create({
   links: {
-    color: '#4A4A4AC',
+    color: '#4A4A4A',
 
     
 
@@ -73,15 +66,15 @@ const Bloco = () =>{
 
       <View style={styleBloco.container}>
 <View style={styleBloco.bloco}>
-<img width="25px" height="25px" src={like} />
+<Image source={require('./src/assets/link-like.png')}/>
 <Text style={styleBloco.textview}  >Like</Text>
 </View>
 <View style={styleBloco.bloco}>
-<img width="25px" height="25px" src={comentario} />
+<Image source={require('./src/assets/link-coment.png')}/>
 <Text style={styleBloco.textview}  >Comment</Text>
 </View>
 <View style={styleBloco.bloco}>
-<img width="25px" height="25px" src={linkshare} />
+<Image source={require('./src/assets/link-share.png')}/>
 <Text style={styleBloco.textview} >Share</Text>
 </View>
 
@@ -89,6 +82,8 @@ const Bloco = () =>{
 
 
   );
+
+  
 
 };
 
@@ -106,7 +101,7 @@ const styleBloco = StyleSheet.create({
   
   textview:{
     marginLeft: 10,
-    marginTop: 5,
+    marginTop: 2,
 
   },
 
@@ -114,7 +109,7 @@ const styleBloco = StyleSheet.create({
   bloco:{
     flexDirection: 'row',
     color:'black',
-    fontSize: 30,
+    fontSize: 35,
     textAlign: 'center',
     fontFamily:'arial',
     paddingHorizontal: 20,
@@ -134,16 +129,16 @@ export default function App() {
 
 
       <View style={styles.header}>
-        <img width="40px" height="35px" src={setaDireita} />
+      <Image source={require('./src/assets/arrow-left.png')}/>
 
         <View style={styles.inputTextView}>
 
-          <img width="30px" height="30px" src={lupaPesquisa} />
+        <Image source={require('./src/assets/ei_search.png')}/>
 
           <TextInput style={styles.inputText} placeholderTextColor="#F4FFFF" placeholder="Pesquisa"></TextInput>
         </View>
 
-        <img width="40px" height="35px" src={share} />
+        <Image source={require('./src/assets/share.png')}/>
 
 
 
@@ -189,12 +184,13 @@ const styles = StyleSheet.create({
   },
 
   header: {
+    marginTop:25,
     alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'row',
     backgroundColor: '#1261A0',
     minHeight: 50,
-    paddingTop: 20,
+    paddingTop: 15,
     paddingHorizontal: 15,
     paddingVertical: 20,
 
