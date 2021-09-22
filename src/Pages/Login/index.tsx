@@ -1,9 +1,23 @@
 import React from 'react';
-import { View, Text, TextInput, Button, Image } from 'react-native';
+import { View, Text, TextInput, Button, Image, TouchableOpacity } from 'react-native';
 import { Linking } from 'react-native';
 import { stylePagina } from './Styles';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import { StackNavigatorParamList } from './types';
 
 const Login = () => {
+
+    const navigation = useNavigation();
+
+    function IrparaTelaHome(){
+
+        navigation.navigate('Home');
+
+    }
+        type LoginProps = NativeStackNavigationProp<StackNavigatorParamList, 'Login'>;
+
+
     return(
 
         
@@ -50,8 +64,10 @@ const Login = () => {
 
             </View>
 
-            <View style={stylePagina.botao}>
-                <Button title="Logar"></Button>
+            <View style={stylePagina.botao} >
+                <TouchableOpacity onPress={IrparaTelaHome}> 
+                    <Text style={stylePagina.botaoTexto}>Logar</Text>
+                </TouchableOpacity>
 
             </View>
             <View style={stylePagina.link}>

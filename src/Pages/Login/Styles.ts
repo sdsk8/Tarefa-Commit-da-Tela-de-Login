@@ -27,11 +27,20 @@ export const stylePagina = StyleSheet.create({
     botao:{
        
         width:300,
-        
+        height:50,
         margin:20,
-      
+        backgroundColor:"#282973",
+        alignItems: "center",
+        borderRadius: 4,
+
        
      
+
+    },
+    botaoTexto:{
+        marginVertical: 15,
+        color:"white",
+
 
     },
 
